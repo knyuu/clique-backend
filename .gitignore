@@ -1,0 +1,62 @@
+# --- BẢO MẬT (QUAN TRỌNG NHẤT) ---
+# Chứa mật khẩu DB, JWT Secret, API Keys... Tuyệt đối không push!
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env.bak
+*.env.example
+# (Lưu ý: Bạn nên tạo file .env.example nhưng chỉ để tên biến, không để giá trị thật)
+
+# --- DEPENDENCIES (THƯ VIỆN) ---
+# Thư mục này cực nặng, chỉ cần package.json là đủ để cài lại
+node_modules/
+jspm_packages/
+
+# --- LOGS (NHẬT KÝ LỖI) ---
+# Tránh đẩy hàng nghìn dòng log rác lên Git
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# --- BUILD & OUTPUT ---
+# Các file tự động sinh ra khi chạy hoặc build dự án
+dist/
+build/
+out/
+.node_repl_history
+
+# --- TESTING ---
+# Kết quả test và độ bao phủ code
+coverage/
+.nyc_output
+
+# --- CÁC FILE TẠM CỦA HỆ ĐIỀU HÀNH & EDITOR ---
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+.DS_Store
+Thumbs.db
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# --- CÁC FILE TẠM CỦA BACKEND ---
+# Nếu bạn dùng upload file (Multer), hãy bỏ qua thư mục chứa file tạm
+public/uploads/*
+!public/uploads/.gitkeep
+# (Dòng trên giúp giữ lại thư mục uploads nhưng không push file bên trong lên)
+
+# Process ID files (dùng khi deploy bằng PM2)
+pids
+*.pid
+*.seed
+*.pid.lock
